@@ -1,3 +1,4 @@
+//Problem: http://www.usaco.org/index.php?page=viewproblem2&cpid=615
 #include <iostream>
 using namespace std;
 

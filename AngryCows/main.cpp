@@ -1,3 +1,4 @@
+//Problem: http://www.usaco.org/index.php?page=viewproblem2&cpid=594
 #include <iostream>
 #include <algorithm>
 #include <cstdlib>

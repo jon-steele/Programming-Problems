@@ -1,3 +1,4 @@
+//Problem: http://usaco.org/index.php?page=viewproblem2&cpid=419
 #include <iostream>
 #include <cmath>
 using namespace std;
