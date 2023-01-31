@@ -1,4 +1,11 @@
-//http://www.usaco.org/index.php?page=viewproblem2&cpid=965
+*********************************************
+Author: 300151384 - Jon
+Link: //http://www.usaco.org/index.php?page=viewproblem2&cpid=965
+Difficulty: 7
+Category: Permutations
+Note: A good exercise for permutations
+*********************************************
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -49,7 +56,7 @@ bool matchesPairs(){
 int main() {
     //If submitting on usaco, you need to uncomment this
     // freopen("lineup.in", "r", stdin);
-	// freopen("lineup.out", "w", stdout);
+    // freopen("lineup.out", "w", stdout);
     string foo, cow1, cow2;
 
     cin >> n;
@@ -79,3 +86,4 @@ int main() {
         cout << cows[i] << endl;
     }
 }
+*********************************************
