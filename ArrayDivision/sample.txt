@@ -1,0 +1,20 @@
+You are given an array containing n positive integers.
+
+Your task is to divide the array into k subarrays so that the maximum sum in a subarray is as small as possible.
+
+5 3
+2 4 7 3 5
+
+Output:
+8
+
+Explanation: An optimal division is [2,4],[7],[3,5] where the sums of the subarrays are 6,7,8. The largest sum is the last sum 8
+
+
+So to do this problem, I need to write a check function, that checks if a number, "x," is viable.
+check will then go in and loop through n. If in the current packet they add up to more than x, it moves to the next packet
+Either 2 things will happen. We will arrive to the end of the packets, or we will meet, or be less than the end of the packets.
+If the latter is the case, the number works. If not, it does not. 
+
+In order to do the binary search, we will set our low value to be 0, and our high value to 10e9.
+We will binary search for each middle value, until our low = our high. At which point, the answer will be either or. 

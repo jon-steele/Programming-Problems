@@ -1,0 +1,148 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: SoldierAndBanana
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/jonsteele/Code/C++/440/SoldierAndBanana/cmake-build-debug/
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target SoldierAndBanana
+
+
+#############################################
+# Order-only phony target for SoldierAndBanana
+
+build cmake_object_order_depends_target_SoldierAndBanana: phony || CMakeFiles/SoldierAndBanana.dir
+
+build CMakeFiles/SoldierAndBanana.dir/library.cpp.o: CXX_COMPILER__SoldierAndBanana_Debug /Users/jonsteele/Code/C++/440/SoldierAndBanana/library.cpp || cmake_object_order_depends_target_SoldierAndBanana
+  DEP_FILE = CMakeFiles/SoldierAndBanana.dir/library.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/SoldierAndBanana.dir
+  OBJECT_FILE_DIR = CMakeFiles/SoldierAndBanana.dir
+
+build CMakeFiles/SoldierAndBanana.dir/main.cpp.o: CXX_COMPILER__SoldierAndBanana_Debug /Users/jonsteele/Code/C++/440/SoldierAndBanana/main.cpp || cmake_object_order_depends_target_SoldierAndBanana
+  DEP_FILE = CMakeFiles/SoldierAndBanana.dir/main.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/SoldierAndBanana.dir
+  OBJECT_FILE_DIR = CMakeFiles/SoldierAndBanana.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target SoldierAndBanana
+
+
+#############################################
+# Link the static library libSoldierAndBanana.a
+
+build libSoldierAndBanana.a: CXX_STATIC_LIBRARY_LINKER__SoldierAndBanana_Debug CMakeFiles/SoldierAndBanana.dir/library.cpp.o CMakeFiles/SoldierAndBanana.dir/main.cpp.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = CMakeFiles/SoldierAndBanana.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = libSoldierAndBanana.a
+  TARGET_PDB = SoldierAndBanana.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/jonsteele/Code/C++/440/SoldierAndBanana/cmake-build-debug && "/Users/jonsteele/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/jonsteele/Code/C++/440/SoldierAndBanana/cmake-build-debug && "/Users/jonsteele/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/bin/cmake" --regenerate-during-build -S/Users/jonsteele/Code/C++/440/SoldierAndBanana -B/Users/jonsteele/Code/C++/440/SoldierAndBanana/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+build SoldierAndBanana: phony libSoldierAndBanana.a
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/jonsteele/Code/C++/440/SoldierAndBanana/cmake-build-debug
+
+build all: phony libSoldierAndBanana.a
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | /Users/jonsteele/Code/C++/440/SoldierAndBanana/CMakeLists.txt /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build /Users/jonsteele/Code/C++/440/SoldierAndBanana/CMakeLists.txt /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Users/jonsteele/Library/Application$ Support/JetBrains/Toolbox/apps/CLion/ch-0/223.8214.51/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all
