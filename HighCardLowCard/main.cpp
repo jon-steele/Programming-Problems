@@ -8,7 +8,8 @@
 using namespace std;
 
 int bessie_points = 0;
-vector<int> elise_cards;
+vector<int> elise_low;
+vector<int> elise_hi;
 vector<int> bessie_cards;
 vector<int> bessie_hi_cards;
 vector<int> bessie_low_cards;
@@ -17,29 +18,31 @@ int n, card;
 int main()
 {
     cin >> n;
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n/2; i++){
         cin >> card;
-        elise_cards.push_back(card);
+        elise_hi.push_back(card);
     }
 
-    for (int i = 1; i < 2 * n; i++)
-    {
+    for (int i = n/2; i < n; i++){
+        cin >> card;
+        elise_low.push_back(card);
+    }
+
+    // Find Bessie's Cards
+    for (int i = 1; i <= 2 * n; i++){
         bool bessie_card = true;
-        for (int j = 0; j < n; j++)
-        {
-            if (elise_cards[j] == i)
-            {
+        for (int j = 0; j < n; j++){
+            if (elise_cards[j] == i){
                 bessie_card = false;
                 break;
             }
         }
-        if (bessie_card == true)
-        {
+        if (bessie_card == true){
             bessie_cards.push_back(i);
         }
-                
     }
+
+    // Sorting bessies cards, placing them inside a high and low deck
 
     sort(bessie_cards.begin(), bessie_cards.end());
     reverse(bessie_cards.begin(), bessie_cards.end());
@@ -54,7 +57,7 @@ int main()
         bessie_low_cards.push_back(bessie_cards[n - 1 - i]);
     }
 
-    // I rearrange the cards from worst to best
+    // I rearrange the cards from worst to best, for each deck
     reverse(bessie_hi_cards.begin(), bessie_hi_cards.end());
     reverse(bessie_low_cards.begin(), bessie_low_cards.end());
 
