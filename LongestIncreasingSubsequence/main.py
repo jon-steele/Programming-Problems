@@ -1,26 +1,23 @@
 # https://leetcode.com/problems/longest-increasing-subsequence/
+class Solution(object):
+    def lengthOfLIS(self, nums):
 
-list = []
-longest_subsequence = []
+        list = nums
+        longest_subsequence = []
+            
+        # Loop through each element
+        for i in range(0, len(list)):
 
-n = int(input())
-for i in range (0, n):
-    next = int(input())
-    list.append(next)
-    
-# Loop through each element
-for i in range(0, n):
+            maximum = 0 # The element we use to compare options
+            
+            # Loop backwards, and consider each element prior
+            for j in range(i - 1, -1, -1):
+                
+                # If the element is smaller, and better than our max, we include it
+                if (list[j] < list[i] and longest_subsequence[j] > maximum):
+                    maximum = longest_subsequence[j]
+            
+            # Assign the value to this element
+            longest_subsequence.append(maximum + 1)
 
-    max = 0 # The element we use to compare options
-    
-    # Loop backwards, and consider each element prior
-    for j in range(i - 1, -1, -1):
-        
-        # If the element is smaller, and better than our max, we include it
-        if (list[j] <= list[i] and longest_subsequence[j] > max):
-            max = longest_subsequence[j]
-    
-    # Assign the value to this element
-    longest_subsequence.append(max + 1)
-    
-print(longest_subsequence)
+        return(max(longest_subsequence))
