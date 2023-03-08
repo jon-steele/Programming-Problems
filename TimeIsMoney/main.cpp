@@ -24,6 +24,8 @@ int main(){
     }
 
     // Now, we need to find the shortest path.
-    // Each iteration, we will add a path to all of our paths
+    // I'm thinking we use a bfs to iteratively try each path
+    // However, this will have a time complexity of 2^n, and we need n^2 or better
+    
     
 }
