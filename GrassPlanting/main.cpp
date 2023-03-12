@@ -28,7 +28,7 @@ int main()
     for (int i = 1; i <= n; i++)
     {
         if(fields[i].size() > maximum)
-         maximum = fields[i].size();
+            maximum = fields[i].size();
     }
     
     cout << maximum + 1 << endl;
