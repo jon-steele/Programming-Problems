@@ -1,13 +1,17 @@
-#include<iostream>
-#include<cstring>
+// https://codeforces.com/gym/102951/problem/C
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <map>
+
 using namespace std;
 
 int main()
 {
     int n;
     cin >> n;
-    int first[n];
-    int second[n];
+    vector<int> first(n), second(n), index_mapping(n + 1);
+    
     for (int i = 0; i < n; i++)
     {
         cin >> first[i];
@@ -15,23 +19,32 @@ int main()
     for (int i = 0; i < n; i++)
     {
         cin >> second[i];
+        index_mapping[second[i]] = i;
     }
-
-    int matrix[n + 1][n + 1];
-    memset(matrix, 0, sizeof(matrix));
     
-    for (int row = 1; row < n + 1; row++)
+    // Create a new sequence using the indexes of elements from the second sequence
+    vector<int> new_sequence(n);
+    for (int i = 0; i < n; i++)
     {
-        for (int col = 1; col < n + 1; col++)
+        new_sequence[i] = index_mapping[first[i]];
+    }
+    
+    // Use patience sorting to find the longest increasing subsequence
+    vector<int> patience_table;
+    for (int val : new_sequence)
+    {
+        auto it = lower_bound(patience_table.begin(), patience_table.end(), val);
+        if (it == patience_table.end())
         {
-            if (first[row - 1] == second[col - 1])
-                matrix[row][col] = max(matrix[row - 1][col], matrix[row][col - 1]) + 1;
-            else
-                matrix[row][col] = max(matrix[row - 1][col], matrix[row][col - 1]);
+            patience_table.push_back(val);
+        }
+        else
+        {
+            *it = val;
         }
     }
 
-    cout << matrix[n][n] << endl;    
-
+    cout << patience_table.size() << endl;
+    
     return 0;
 }
