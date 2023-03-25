@@ -4,8 +4,8 @@ using namespace std;
 
 int n, m;
 
-int neighborX[4] = {0, 0, 1, -1};
-int neighborY[4] = {1, -1, 0, 0};
+int neighbourX[4] = {0, 0, 1, -1};
+int neighbourY[4] = {1, -1, 0, 0};
 
 int visited[1001][1001];
 char grid[1001][1001];
@@ -29,8 +29,8 @@ void dfs (int y, int x) {
   visited[y][x] = 1;
   // dfs each valid direction
   for (int i = 0 ; i < 4 ; i++) {
-    int nextX = x + neighborX[i];
-    int nextY = y + neighborY[i];
+    int nextX = x + neighbourX[i];
+    int nextY = y + neighbourY[i];
 
     // We check each direction. If it is valid, and not traversed, we can continue our search on it.
     if (check(nextX, nextY)) {
