@@ -10,7 +10,7 @@ int main() {
 
     int a, b;
     cin >> n >> m;
-    vector<vector<int>> courses(n + 1);
+    vector<vector<int>> courses(n + 1); // Holds the course dependencies
     vector<int> indegree(n + 1, 0);
 
     for (int i = 0; i < m; i++) {
@@ -20,7 +20,7 @@ int main() {
     }
 
     queue<int> queue;
-    // Getting the roots 
+    // Getting the roots, adding them first into our queue
     for (int i = 1; i <= n; i++) {
         if (indegree[i] == 0) {
             queue.push(i);
