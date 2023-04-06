@@ -39,6 +39,8 @@ int main() {
             int neighbour = courses[current][i];
             
             indegree[neighbour]--;
+
+            // We only explore the child node if it has no more parent nodes
             if (indegree[neighbour] == 0) {
                 queue.push(neighbour);
             }
